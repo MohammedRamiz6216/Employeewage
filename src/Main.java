@@ -10,8 +10,7 @@ public class Main {
         int empWage=0;
 
 
-        int empHrs =0;
-        int empWage =0;
+
 
         int random_int = (int)Math.floor(Math.random() *10)%2;
         if(random_int == IS_FULL_TIME)
