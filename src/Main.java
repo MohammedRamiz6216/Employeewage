@@ -24,6 +24,17 @@ public class Main {
         else{
             System.out.println("The part time employee wage is :"+ wph*8);
         }
-        System.out.println("The daily employee wage is :"+ fdew);
+
+
+        switch (random_in){
+            case 1:
+                System.out.println("The daily employee wage is  :"+wph*8);
+                break;
+
+            case 2:
+                System.out.println("The part time employee wage is :"+wph*8);
+                break;
+
+        }
     }
 }
