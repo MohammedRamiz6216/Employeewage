@@ -4,7 +4,7 @@ public class Main {
     public static final int IS_FULL_TIME=2;
     public static final int EMP_RATE_PER_HOUR = 20;
     public static final int NUM_OF_WORKING_DAYS=20;
-    public static final int MAX_HOURS_IN_MONTH = 10;
+    public static final int MAX_HOURS_IN_MONTH = 100;
     public static void main(String[] args) {
 
         int empHrs=0;
@@ -13,7 +13,7 @@ public class Main {
         int totalWorkingDays=0;
 
 
-while(totalEmpHours<=MAX_HOURS_IN_MONTH && totalWorkingDays <=NUM_OF_WORKING_DAYS){
+while(totalEmpHours<=MAX_HOURS_IN_MONTH && totalWorkingDays <NUM_OF_WORKING_DAYS){
     totalWorkingDays++;
     int random_int = (int) Math.floor(Math.random() * 10) % 3;
     switch (random_int) {
