@@ -3,37 +3,15 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage Computation");
 
-        int fdew=1;
-        int pdew=2;
-        int wph = 20;
+        int Is_Full_Time=1;
 
 
-
-
-        int random_int = (int)Math.floor(Math.random() *(pdew-fdew+1)+fdew);
-        if(random_int == 1){
-            System.out.println("Absent");
-        }
-        else{
+        int random_int = (int)Math.floor(Math.random() *10)%2;
+        if(random_int == Is_Full_Time)
             System.out.println("Present");
-        }
-        if(random_int==fdew){
-            System.out.println("The daily employee wage is :"+wph*8);
-        }
-        else{
-            System.out.println("The part time employee wage is :"+ wph*8);
-        }
+        else
+            System.out.println("Absent");
 
 
-        switch (random_int){
-            case 1:
-                System.out.println("The daily employee wage is  :"+wph*8);
-                break;
-
-            case 2:
-                System.out.println("The part time employee wage is :"+wph*8);
-                break;
-
-        }
     }
 }
