@@ -4,7 +4,8 @@ public class Main {
         System.out.println("Welcome to Employee Wage Computation");
         int ispresent =0;
         int isabsent =1;
-
+        int wph = 20;
+        int fdh = 8;
         int random_int = (int)Math.floor(Math.random() *(isabsent - ispresent + 1) + ispresent);
         if(random_int == 0){
             System.out.println("Absent");
@@ -12,6 +13,6 @@ public class Main {
         else{
             System.out.println("Present");
         }
-
+        System.out.println("The daily employee wage is :"+ wph*fdh);
     }
 }
