@@ -2,8 +2,20 @@ import java.util.*;
 public class Main {
    public static final int IS_PART_TIME =1;
     public static final int IS_FULL_TIME=2;
+    private String company;
+    private int empRatePerHour;
+    private int noOfWorkingDays;
+    private int maxHoursPerMonth;
+    private int totalEmpWage;
+    public Main(String company,int empRatePerHour,int noOfWorkingDays, int maxHoursPerMonth){
+        this.company=company;
+        this.empRatePerHour=empRatePerHour;
+        this.noOfWorkingDays=noOfWorkingDays;
+        this.maxHoursPerMonth=maxHoursPerMonth;
 
-    public static int computeEmpWage(String company,int empRatePerHour,int noOfWorkingDays,int maxHoursPerMonth){
+
+    }
+    public void computeEmpWage(){
 
         int empHrs=0;
         int totalEmpHours=0;
@@ -31,18 +43,19 @@ while(totalEmpHours<=maxHoursPerMonth && totalWorkingDays <noOfWorkingDays){
     System.out.println("Days :" + totalWorkingDays+"Hours :"+totalEmpHours);
 
 }
-int totalEmpWage = totalEmpHours*empRatePerHour;
-        System.out.println("Total Emp Wage :"+totalEmpWage);
-        return totalEmpHours;
+ totalEmpWage= totalEmpHours*empRatePerHour;
+
+
+    }
+    public String toString(){
+        return "Total emp wage of "+company+" is :"+totalEmpWage;
     }
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for(int i=0;i<n;i++){
-         String s = sc.next();
-         int emp    = sc.nextInt();
-         int num = sc.nextInt();
-         int max = sc.nextInt();
-        computeEmpWage(s,emp,num,max);}
+        Main dMart = new Main("Dmart",20,20,100);
+        Main Relaince = new Main("Relaince",20,20,100);
+        dMart.computeEmpWage();
+        System.out.println(dMart);
+        Relaince.computeEmpWage();
+        System.out.println(Relaince);
     }
 }
